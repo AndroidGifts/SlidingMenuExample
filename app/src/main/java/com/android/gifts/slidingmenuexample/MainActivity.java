@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         menu = new SlidingMenu(this);
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         menu.setShadowWidth(16);
-        menu.setBehindOffset(150);
+        menu.setBehindOffset(120);
         menu.setFadeDegree(0.35f);
         menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
         menu.setMenu(R.layout.menu_frame);
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.menu_frame, new SampleListFragment())
+                .replace(R.id.menu_frame, new SlidingMenuFragment())
                 .commit();
     }
 }
