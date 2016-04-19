@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                menu.toggle();
+                toggleMenu();
             }
         });
 
@@ -31,13 +31,18 @@ public class MainActivity extends AppCompatActivity {
         menu = new SlidingMenu(this);
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         menu.setShadowWidth(16);
-        menu.setBehindOffset(120);
+        menu.setBehindOffset(200);
         menu.setFadeDegree(0.35f);
+        menu.setMode(SlidingMenu.LEFT); // Use SlidingMenu.RIGHT to start the menu from right
         menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
         menu.setMenu(R.layout.menu_frame);
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.menu_frame, new SlidingMenuFragment())
+                .replace(R.id.menu_frame, SlidingMenuFragment.newInstance())
                 .commit();
+    }
+
+    public void toggleMenu() {
+        menu.toggle();
     }
 }
