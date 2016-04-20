@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         menu.setFadeDegree(0.35f);
         menu.setMode(SlidingMenu.LEFT); // Use SlidingMenu.RIGHT to start the menu from right
         menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
-        menu.setMenu(R.layout.menu_frame);
+        menu.setMenu(R.layout.fargment_sliding_menu);
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.menu_frame, SlidingMenuFragment.newInstance())

@@ -7,7 +7,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <RelativeLayout
             android:id="@+id/menu_header"
             android:layout_width="match_parent"
@@ -34,7 +33,6 @@
                 android:text="User Name"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#fff" />
-
         </RelativeLayout>
 
         <android.support.v7.widget.RecyclerView

@@ -28,7 +28,7 @@ public class SlidingMenuFragment extends Fragment {
 	}
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.menu_frame, parent, false);
+		View rootView = inflater.inflate(R.layout.fargment_sliding_menu, parent, false);
 
 		// Instantiate image view object of the user avatar and attaching onClick listener to it.
 		ImageView userAvatar = (ImageView) rootView.findViewById(R.id.user_avatar);
